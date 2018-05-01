@@ -13,8 +13,8 @@
 <div id="root"></div>
 <script type="text/javascript">
   var input = "ReactDOM.render(<h1>Hello, World!</h1>, document.getElementById('root'));";
-  var output = Babel.transform(input, { presets: ['jsx'] }).code;
-  alert(output);
+  var output = Babel.transform(input, { presets: ['react'] }).code;
+  eval(output);
 </script>
 </body>
 </html> 
