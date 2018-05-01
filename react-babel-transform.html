@@ -12,7 +12,6 @@
 <body>
 <div id="root"></div>
 <script type="text/javascript">
-  alert(888);
   var input = 'ReactDOM.render(<h1>Hello, World!</h1>, document.getElementById("root"));';
   var output = Babel.transform(input, { presets: ['jsx'] }).code;
   alert(output);
