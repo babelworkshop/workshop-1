@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<title>Babel Workshop</title>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
@@ -10,15 +10,18 @@
 
 </head>
 <body>
-<div id="root"></div>
-<script type="text/javascript">
-  
-  var react = "ReactDOM.render(<h1>Hello, World!</h1>, document.getElementById('root'));";
-  
-  var code = Babel.transform(before, { presets: ['react'] }).code;
-  
-  eval(output);
-  
-</script>
+  <div id="root"></div>
+
+  <script type="text/javascript">
+    
+    var code = "ReactDOM.render(<h1>Hello, World!</h1>, document.getElementById('root'));";
+
+    var transformed = Babel.transform(code, { presets: ['react'] }).code;
+    
+    console.log(transformed);
+    
+    eval(transformed);
+  </script>
+
 </body>
 </html> 
