@@ -14,11 +14,14 @@
 
   <script type="text/javascript">
     
-    var code = "\
-      ReactDOM.render(<h1>Hello, World!</h1>, document.getElementById('root'));";
+    var myCode = `
+      ReactDOM.render(
+        <h1>Hello, World!</h1>,
+        document.getElementById('root'));
+    `;
 
-    var transformed = Babel.transform(code, { presets: ['react'] }).code;
-    console.log(transformed);
+    var transformed = Babel.transform(myCode, { presets: ['react'] }).code;
+   
     eval(transformed);
     
   </script>
